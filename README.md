@@ -57,7 +57,7 @@ sequenceDiagram
     C-->>P: HTTP Status (201/200)
 ### Diagrama de classes
 
-classDiagram
+
 
     class MealPlanModel {
         +Long id
