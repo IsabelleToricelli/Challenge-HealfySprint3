@@ -29,7 +29,6 @@ A MealPlan permite realizar operações CRUD:
 * Listar todos os planos por ID
 * Atualizar um plano existente
 * Excluir um plano por ID
-
 Todas as operações retornam códigos HTTP adequados e mensagens de erro tratadas no controller.
 ---
 
