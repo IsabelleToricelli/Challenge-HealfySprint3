@@ -58,6 +58,7 @@ sequenceDiagram
     C-->>P: HTTP Status (201/200)
 
 ### Diagrama de classes
+
 classDiagram
     class MealPlanModel {
         +Long id
@@ -67,6 +68,8 @@ classDiagram
         +LocalDate planDate
         +updateInformation(MealPlanRecord data)
     }
+---
+
 
 ### URLs de Acesso
 API Local: http://localhost:8085/mealplans
