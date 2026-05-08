@@ -39,7 +39,6 @@ A aplicação segue o padrão de camadas para separação de responsabilidades, 
 ### Diagrama de Sequência (Fluxo de Requisição)
 Este diagrama ilustra como os dados trafegam desde a requisição do usuário até a persistência no banco de dados.
 
-```mermaid
 sequenceDiagram
     participant P as Postman / Client
     participant C as MealPlanController
@@ -49,14 +48,13 @@ sequenceDiagram
 
     P->>C: POST/PUT /mealplans (JSON)
     C->>S: process(data)
-    S->>S: Validações de Regra de Negócio
+    S->>S: Validações
     S->>R: save(entity)
     R->>DB: SQL Insert/Update
     DB-->>R: Confirmação
     R-->>S: Objeto Persistido
     S-->>C: Data Transfer Object
     C-->>P: HTTP Status (201/200)
-
 ### Diagrama de classes
 
 classDiagram
