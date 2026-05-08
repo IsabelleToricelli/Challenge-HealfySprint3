@@ -58,6 +58,7 @@ sequenceDiagram
 ### Diagrama de classes
 
 classDiagram
+
     class MealPlanModel {
         +Long id
         +String userName
