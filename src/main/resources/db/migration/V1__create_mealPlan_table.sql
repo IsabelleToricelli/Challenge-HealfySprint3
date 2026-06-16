@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS mealplan (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(255) NOT NULL,
+    goal VARCHAR(50) NOT NULL,
+    calories INT,
+    plan_date TIMESTAMP
+
+);
+
+CREATE INDEX nome_do_indice
+    ON mealplan(user_name);

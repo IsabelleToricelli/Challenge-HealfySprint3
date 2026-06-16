@@ -3,8 +3,9 @@ CREATE TABLE IF NOT EXISTS mealplan (
     user_name VARCHAR(255) NOT NULL,
     goal VARCHAR(50) NOT NULL,
     calories INT,
-    plan_date TIMESTAMP,
+    plan_date TIMESTAMP
 
 );
 
-CREATE INDEX
+CREATE INDEX nome_do_indice
+    ON mealplan(user_name);

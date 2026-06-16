@@ -1,0 +1,9 @@
+package br.com.healfy.ChallengeHealfySOA.repository;
+
+import br.com.healfy.ChallengeHealfySOA.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    UserDetails findByUsername (String username);
+}
