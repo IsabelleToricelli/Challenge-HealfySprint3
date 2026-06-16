@@ -87,6 +87,30 @@ Usuário: sa | Senha: senha
   "goal": "EMAGRECIMENTO", 
   "calories": 1800 
 }
+### Testes de Funcionalidade (CRUD e Persistência)
+
+**1. Criação de Plano Alimentar (POST /mealplans)**
+Validação do retorno 201 Created com o JSON processado corretamente:
+![JSON Response]<img width="477" height="142" alt="image" src="https://github.com/user-attachments/assets/d93aaead-a2a3-4529-b387-47297a80d1b9" />
+
+**2. Persistência no Banco de Dados (H2 Console)**
+Consulta realizada via SQL provando que o registro foi salvo com sucesso:
+![Banco H2]<img width="311" height="250" alt="image" src="https://github.com/user-attachments/assets/921fc7b9-89a7-4e06-af30-0193dbacdfe2" />
+
+### Autenticação e Geração de Token (POST /auth/login)
+Para acessar os endpoints protegidos da aplicação, é necessário primeiro realizar o login para obter o token JWT.
+
+* **Payload de Exemplo:**
+`{"username": "admin", "password": "123456"}`
+
+Validação do retorno 200 OK com o token gerado com sucesso:
+![Teste de Login]()<img width="838" height="358" alt="image" src="https://github.com/user-attachments/assets/65234125-df84-4b32-80a3-0395bb71db24" />
+
+## Testes Automatizados
+O projeto possui testes de integração para validar a autenticação e o consumo dos serviços.
+
+* **Status**: 100% de sucesso nos testes de integração.
+![Teste de Autenticação passando](<img width="663" height="227" alt="image" src="https://github.com/user-attachments/assets/32b738cb-0303-4a01-a60c-4d1fdcc69386" />)
 
 ### Integrantes (Equipe FIAP)
 Beatriz Rocha - RM: 552806
