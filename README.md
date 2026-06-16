@@ -34,8 +34,42 @@ Todas as operações retornam códigos HTTP adequados e mensagens de erro tratad
 
 ---
 
+## Como Executar o Projeto
+
+**Pré-requisitos:**
+* Java 17+ instalado.
+* Maven instalado.
+* 
+  **Passo a passo:**
+1. Clone o repositório:
+```bash
+   git clone [URL_DO_SEU_REPOSITORIO]
+2. Acesse a pasta do projeto:
+cd [Challenge-HealfySprint3]
+3. Instale as dependências e compile o projeto:
+```bash
+mvn clean install
+4. Inicie a aplicação:
+```bash
+mvn spring-boot:run
+
+A API estará disponível localmente na porta 8085
+
+---
+## URLs de Acesso
+* API Local: http://localhost:8085/mealplans
+* Swagger UI (Documentação Automática): http://localhost:8085/swagger-ui.html
+* OpenAPI (JSON): http://localhost:8085/v3/api-docs
+* Console do Banco (H2): http://localhost:8085/h2-console
+    * JDBC URL: jdbc:h2:file:~/testdb
+    * Usuário: sa | Senha: senha
+
+___
+
 ## Arquitetura e Fluxo
 A aplicação segue o padrão de camadas para separação de responsabilidades, facilitando a manutenção e a testabilidade.
+
+___
 
 ### Diagrama de Sequência (Fluxo de Requisição)
 Este diagrama ilustra como os dados trafegam desde a requisição do usuário até a persistência no banco de dados.
@@ -56,6 +90,9 @@ sequenceDiagram
     R-->>S: Objeto Persistido
     S-->>C: Data Transfer Object
     C-->>P: HTTP Status (201/200)
+
+___
+
 ### Diagrama de classes
 
 
@@ -68,17 +105,8 @@ sequenceDiagram
         +LocalDate planDate
         +updateInformation(MealPlanRecord data)
     }
+
 ---
-
-
-### URLs de Acesso
-API Local: http://localhost:8085/mealplans
-
-Console do Banco (H2): http://localhost:8085/h2-console
-
-JDBC URL: jdbc:h2:file:~/testdb
-
-Usuário: sa | Senha: senha
 
 ### Estrutura do JSON (Postman)
 
