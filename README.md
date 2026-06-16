@@ -43,15 +43,20 @@ Todas as operações retornam códigos HTTP adequados e mensagens de erro tratad
   **Passo a passo:**
 1. Clone o repositório:
 ```bash
-   git clone [URL_DO_SEU_REPOSITORIO]
+   git clone https://github.com/IsabelleToricelli/Challenge-HealfySprint3.git
+```
 2. Acesse a pasta do projeto:
-cd [Challenge-HealfySprint3]
-3. Instale as dependências e compile o projeto:
+```bash
+cd Challenge-HealfySprint3
+```
+4. Instale as dependências e compile o projeto:
 ```bash
 mvn clean install
+```
 4. Inicie a aplicação:
 ```bash
 mvn spring-boot:run
+```
 
 A API estará disponível localmente na porta 8085
 
@@ -145,7 +150,7 @@ O projeto possui testes de integração para validar a autenticação e o consum
 <img width="663" height="227" alt="image" src="https://github.com/user-attachments/assets/32b738cb-0303-4a01-a60c-4d1fdcc69386" />
 
 ### Integrantes (Equipe FIAP)
-Beatriz Rocha - RM: 552806
+Beatriz Rocha - RM: 553455
 
 Isabelle Torricelli - RM: 552806
 
